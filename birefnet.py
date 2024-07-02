@@ -13,7 +13,12 @@ import folder_paths
 config = Config()
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-folder_paths.folder_names_and_paths["BiRefNet"] = ([os.path.join(folder_paths.models_dir, "BiRefNet")], folder_paths.supported_pt_extensions)
+
+BiRefNet_folders = [os.path.join(folder_paths.models_dir, "BiRefNet")]
+if os.path.exists("/stable-diffusion-cache/models"):
+    BiRefNet_folders.append(os.path.join("/stable-diffusion-cache/models", "BiRefNet"))
+
+folder_paths.folder_names_and_paths["BiRefNet"] = (BiRefNet_folders, folder_paths.supported_pt_extensions)
 
 
 def tensor2pil(image):
