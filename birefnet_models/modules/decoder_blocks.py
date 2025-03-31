@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from models.modules.aspp import ASPP, ASPPDeformable
-from models.modules.attentions import PSA, SGE
+from birefnet_models.modules.aspp import ASPP, ASPPDeformable
+from birefnet_models.modules.attentions import PSA, SGE
 from config import Config
 
 

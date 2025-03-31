@@ -4,7 +4,6 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 import torch.nn.functional as F
 from PIL import Image
-from models.baseline import BiRefNet
 from config import Config
 from torchvision.transforms.functional import normalize
 import numpy as np
@@ -52,6 +51,7 @@ class BiRefNet_ModelLoader_Zho:
     CATEGORY = "🧹BiRefNet"
   
     def load_model(self, birefnet_model):
+        from birefnet_models.baseline import BiRefNet
         net = BiRefNet()
         model_path = folder_paths.get_full_path("BiRefNet", birefnet_model)
         #print(model_path)

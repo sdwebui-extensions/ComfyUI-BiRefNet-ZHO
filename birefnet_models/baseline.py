@@ -8,13 +8,13 @@ from torchvision.models import vgg16, vgg16_bn
 from torchvision.models import resnet50
 from kornia.filters import laplacian
 
-from models.backbones.build_backbone import build_backbone
-from models.modules.decoder_blocks import BasicDecBlk, ResBlk, HierarAttDecBlk
-from models.modules.lateral_blocks import BasicLatBlk
-from models.modules.aspp import ASPP, ASPPDeformable
-from models.modules.ing import *
-from models.refinement.refiner import Refiner, RefinerPVTInChannels4, RefUNet
-from models.refinement.stem_layer import StemLayer
+from birefnet_models.backbones.build_backbone import build_backbone
+from birefnet_models.modules.decoder_blocks import BasicDecBlk, ResBlk, HierarAttDecBlk
+from birefnet_models.modules.lateral_blocks import BasicLatBlk
+from birefnet_models.modules.aspp import ASPP, ASPPDeformable
+from birefnet_models.modules.ing import *
+from birefnet_models.refinement.refiner import Refiner, RefinerPVTInChannels4, RefUNet
+from birefnet_models.refinement.stem_layer import StemLayer
 
 from config import Config
 from dataset import class_labels_TR_sorted
